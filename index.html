@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>안동 가을 여행</title>
+<meta name="description" content="11월 1일~3일, 울산에서 출발하는 2박 3일 안동 여행 일정">
+<meta property="og:title" content="안동 가을 여행 · 11.1 – 11.3">
+<meta property="og:description" content="하회마을, 병산서원, 월영교 야경, 선성수상길, 만휴정까지 2박 3일 일정">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f1e7;
+    --surface: #fffdf8;
+    --ink: #2b2620;
+    --muted: #7a6f62;
+    --line: #e4dccd;
+    --accent: #c4541f;
+    --accent-soft: #f6e2d3;
+    --moss: #5d6b3f;
+    --moss-soft: #e7ead9;
+    --shadow: 0 1px 2px rgba(60, 40, 20, .06), 0 4px 14px rgba(60, 40, 20, .05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1c1915;
+      --surface: #25211c;
+      --ink: #efe8dc;
+      --muted: #a89c8c;
+      --line: #3a342c;
+      --accent: #e57a45;
+      --accent-soft: #3d2a1f;
+      --moss: #a9b884;
+      --moss-soft: #2c3022;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1c1915;
+    --surface: #25211c;
+    --ink: #efe8dc;
+    --muted: #a89c8c;
+    --line: #3a342c;
+    --accent: #e57a45;
+    --accent-soft: #3d2a1f;
+    --moss: #a9b884;
+    --moss-soft: #2c3022;
+    --shadow: none;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Noto Sans KR", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    word-break: keep-all;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 16px 64px; }
+
+  /* 머리말 */
+  header { padding: 40px 0 24px; }
+  .eyebrow { color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: .08em; }
+  h1 {
+    font-family: "Gowun Batang", serif;
+    font-size: 34px; line-height: 1.25; margin: 6px 0 10px;
+  }
+  .sub { color: var(--muted); margin: 0; }
+  .facts {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 20px;
+  }
+  .fact {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 10px 12px; box-shadow: var(--shadow);
+  }
+  .fact b { display: block; font-size: 17px; }
+  .fact span { color: var(--muted); font-size: 12px; }
+  .stay {
+    margin-top: 8px; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; padding: 12px 14px; display: flex; align-items: center;
+    justify-content: space-between; gap: 12px; box-shadow: var(--shadow);
+  }
+  .stay small { color: var(--muted); display: block; font-size: 12px; }
+
+  /* 탭 */
+  nav.tabs {
+    position: sticky; top: 0; z-index: 5; background: var(--bg);
+    display: flex; gap: 6px; padding: 10px 0; overflow-x: auto;
+    scrollbar-width: none; border-bottom: 1px solid var(--line);
+  }
+  nav.tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: 0 0 auto; border: 1px solid var(--line); background: var(--surface);
+    color: var(--ink); font: inherit; font-size: 14px; font-weight: 500;
+    padding: 7px 14px; border-radius: 999px; cursor: pointer;
+  }
+  .tab[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+  section.panel { padding-top: 22px; }
+  section.panel[hidden] { display: none; }
+  h2 { font-family: "Gowun Batang", serif; font-size: 24px; margin: 0 0 2px; }
+  .day-sub { color: var(--muted); margin: 0 0 18px; font-size: 14px; }
+
+  /* 타임라인 */
+  ol.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+  ol.timeline::before {
+    content: ""; position: absolute; left: 47px; top: 8px; bottom: 8px;
+    width: 2px; background: var(--line);
+  }
+  .stop { display: grid; grid-template-columns: 40px 1fr; gap: 16px; padding-bottom: 14px; position: relative; }
+  .time { font-size: 13px; font-weight: 700; color: var(--muted); padding-top: 13px; text-align: right; }
+  .stop::after {
+    content: ""; position: absolute; left: 43px; top: 18px; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--bg); border: 2px solid var(--accent);
+  }
+  .stop.move::after { border-color: var(--line); background: var(--line); }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 12px 14px; box-shadow: var(--shadow); margin-left: 4px;
+  }
+  .stop.move .card { background: transparent; box-shadow: none; border-style: dashed; color: var(--muted); padding: 8px 12px; }
+  .card h3 { margin: 0; font-size: 16px; }
+  .card p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .tag { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+  .tag.green { background: var(--moss-soft); color: var(--moss); }
+  .map {
+    display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 500;
+    color: var(--accent); text-decoration: none;
+  }
+  .map:hover { text-decoration: underline; }
+
+  /* 목록 */
+  .list { display: grid; gap: 8px; }
+  .item {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 14px; box-shadow: var(--shadow);
+  }
+  .item h3 { margin: 0; font-size: 15px; }
+  .item p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+  h4 { font-size: 14px; color: var(--muted); margin: 24px 0 8px; font-weight: 700; }
+  h4:first-of-type { margin-top: 0; }
+
+  .check { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+  .check input { width: 18px; height: 18px; accent-color: var(--accent); flex: 0 0 auto; }
+  .check input:checked + span { color: var(--muted); text-decoration: line-through; }
+
+  footer { margin-top: 40px; color: var(--muted); font-size: 12px; text-align: center; }
+
+  @media (max-width: 380px) {
+    h1 { font-size: 29px; }
+    .fact b { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">2026 · 11.1 일 – 11.3 화</div>
+    <h1>안동 가을 여행</h1>
+    <p class="sub">울산에서 차로 떠나는 2박 3일. 단풍 든 서원, 강 위의 마을, 달빛 다리.</p>
+
+    <div class="facts">
+      <div class="fact"><b id="dday">D-?</b><span>출발까지</span></div>
+      <div class="fact"><b>약 2시간 반</b><span>울산 → 안동 (자가용)</span></div>
+      <div class="fact"><b>2박 3일</b><span>11월 첫째 주</span></div>
+    </div>
+    <div class="stay">
+      <div>
+        <small>숙소 (2박)</small>
+        <b>안동 브라운도트</b>
+      </div>
+      <a class="map" data-q="안동 브라운도트" href="#">지도 열기 →</a>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" data-panel="d1" aria-selected="true">1일차 · 일</button>
+    <button class="tab" role="tab" data-panel="d2" aria-selected="false">2일차 · 월</button>
+    <button class="tab" role="tab" data-panel="d3" aria-selected="false">3일차 · 화</button>
+    <button class="tab" role="tab" data-panel="food" aria-selected="false">먹을 것</button>
+    <button class="tab" role="tab" data-panel="pack" aria-selected="false">준비물·팁</button>
+  </nav>
+
+  <!-- 1일차 -->
+  <section class="panel" id="d1" role="tabpanel">
+    <h2>강이 휘감은 마을</h2>
+    <p class="day-sub">11월 1일 일요일 · 하회마을 → 부용대 → 병산서원 → 월영교 야경</p>
+    <ol class="timeline">
+      <li class="stop move"><div class="time">08:30</div>
+        <div class="card">울산 출발 · 고속도로 약 2시간 30분 (휴게소 한 번)</div></li>
+      <li class="stop"><div class="time">11:00</div>
+        <div class="card">
+          <h3>하회마을 도착 · 점심</h3>
+          <p>주차장에 차 대고 셔틀버스로 마을 입구까지. 입구 장터 식당에서 안동간고등어 정식이나 안동국시로 첫 끼.</p>
+          <a class="map" data-q="안동하회마을" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop"><div class="time">12:30</div>
+        <div class="card">
+          <h3>하회마을 산책</h3>
+          <p>초가와 기와집 골목, 600년 된 삼신당 느티나무, 강변 만송정 솔숲까지 천천히 한 바퀴.</p>
+          <div class="tags"><span class="tag">유네스코 세계유산</span><span class="tag green">입장료 있음</span></div>
+        </div></li>
+      <li class="stop"><div class="time">14:00</div>
+        <div class="card">
+          <h3>하회별신굿탈놀이 공연</h3>
+          <p>마을 입구 탈놀이 전수교육관 상설공연 (약 1시간). 공연하는 요일·시간은 당일 꼭 확인.</p>
+        </div></li>
+      <li class="stop"><div class="time">15:15</div>
+        <div class="card">
+          <h3>부용대</h3>
+          <p>강 건너 절벽 위에서 하회마을이 물돌이 모양 그대로 내려다보이는 곳. 차로 건너가서 짧게 걸어 올라가요.</p>
+          <a class="map" data-q="부용대 안동" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop"><div class="time">16:15</div>
+        <div class="card">
+          <h3>병산서원</h3>
+          <p>만대루 마루에 앉아 낙동강과 병산을 보는 곳. 늦은 오후 햇살 받을 때가 제일 예뻐요. 진입로 일부가 비포장이라 서행.</p>
+          <div class="tags"><span class="tag">유네스코 세계유산</span><span class="tag green">무료</span></div>
+          <a class="map" data-q="병산서원" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop move"><div class="time">17:30</div>
+        <div class="card">시내로 이동 (약 30분) · 숙소 체크인, 잠깐 쉬기</div></li>
+      <li class="stop"><div class="time">19:00</div>
+        <div class="card">
+          <h3>저녁 · 구시장 찜닭골목</h3>
+          <p>안동찜닭 원조 골목. 가게마다 맛이 조금씩 달라요. 2인이면 반 마리도 충분하고, 당면 사리는 필수.</p>
+          <a class="map" data-q="안동구시장 찜닭골목" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop"><div class="time">20:30</div>
+        <div class="card">
+          <h3>월영교 야경</h3>
+          <p>국내에서 가장 긴 나무다리. 조명 켜진 다리를 건너 가운데 월영정까지 걷고, 강 건너편 산책로도 좋아요.</p>
+          <div class="tags"><span class="tag">오늘의 하이라이트</span><span class="tag green">무료</span></div>
+          <a class="map" data-q="월영교" href="#">지도 열기 →</a>
+        </div></li>
+    </ol>
+  </section>
+
+  <!-- 2일차 -->
+  <section class="panel" id="d2" role="tabpanel" hidden>
+    <h2>산사와 호수 위의 길</h2>
+    <p class="day-sub">11월 2일 월요일 · 봉정사 → 도산서원 → 선성수상길 → 낙강물길공원</p>
+    <ol class="timeline">
+      <li class="stop"><div class="time">09:30</div>
+        <div class="card">
+          <h3>봉정사</h3>
+          <p>천등산 자락의 조용한 절. 우리나라에서 가장 오래된 목조건물 극락전이 있고, 뒤편 영산암 마당이 특히 아늑해요. 시내에서 약 25분.</p>
+          <div class="tags"><span class="tag">유네스코 세계유산</span></div>
+          <a class="map" data-q="봉정사" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop"><div class="time">11:20</div>
+        <div class="card">
+          <h3>도산서원</h3>
+          <p>퇴계 이황 선생의 서원. 앞마당에서 안동호와 강 건너 시사단이 보여요. 단풍 든 나무 사이로 걷기 좋음. 봉정사에서 약 40분.</p>
+          <div class="tags"><span class="tag">유네스코 세계유산</span><span class="tag green">입장료 있음</span></div>
+          <a class="map" data-q="도산서원" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop"><div class="time">12:45</div>
+        <div class="card">
+          <h3>점심 · 도산면 / 예끼마을</h3>
+          <p>예끼마을 근처 식당이나 카페에서 가볍게. 바로 다음 코스와 붙어 있어요.</p>
+        </div></li>
+      <li class="stop"><div class="time">13:45</div>
+        <div class="card">
+          <h3>선성수상길 · 예끼마을</h3>
+          <p>안동호 물 위에 떠 있는 약 1km 부교. 물 위를 걷는 기분이 특별해요. 돌아와서 예끼마을 벽화 골목 구경.</p>
+          <div class="tags"><span class="tag green">무료</span><span class="tag">바람 강하면 통제</span></div>
+          <a class="map" data-q="선성수상길" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop"><div class="time">15:30</div>
+        <div class="card">
+          <h3>낙강물길공원</h3>
+          <p>안동댐 아래 숲속 연못 공원. 징검다리와 메타세쿼이아 길이 있어서 동화 같은 사진이 나와요. 도산에서 약 35분.</p>
+          <div class="tags"><span class="tag green">무료</span><span class="tag">사진 맛집</span></div>
+          <a class="map" data-q="낙강물길공원" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop move"><div class="time">16:30</div>
+        <div class="card">숙소로 돌아와 휴식</div></li>
+      <li class="stop"><div class="time">18:30</div>
+        <div class="card">
+          <h3>저녁 · 안동 한우갈비골목</h3>
+          <p>운흥동 갈비골목. 양념갈비와 생갈비를 같이 시켜서 비교해 보기.</p>
+          <a class="map" data-q="안동 갈비골목" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop"><div class="time">20:00</div>
+        <div class="card">
+          <h3>문화의거리 산책 · 맘모스제과</h3>
+          <p>시내 번화가 산책하고 맘모스제과 크림치즈빵 사 오기 (내일 아침 간식). 구시장 들러 간고등어 기념품도.</p>
+          <a class="map" data-q="맘모스제과 안동" href="#">지도 열기 →</a>
+        </div></li>
+    </ol>
+  </section>
+
+  <!-- 3일차 -->
+  <section class="panel" id="d3" role="tabpanel" hidden>
+    <h2>계곡 속 정자, 그리고 집으로</h2>
+    <p class="day-sub">11월 3일 화요일 · 월영교 낮 산책 → 헛제삿밥 → 만휴정 → 울산</p>
+    <ol class="timeline">
+      <li class="stop move"><div class="time">10:00</div>
+        <div class="card">체크아웃</div></li>
+      <li class="stop"><div class="time">10:30</div>
+        <div class="card">
+          <h3>월영교 낮 산책</h3>
+          <p>밤이랑은 전혀 다른 분위기. 강 위로 안개가 남아 있으면 더 좋아요. 바로 옆 안동민속박물관 야외전시장도 가볍게.</p>
+          <a class="map" data-q="월영교" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop"><div class="time">11:30</div>
+        <div class="card">
+          <h3>브런치 · 헛제삿밥</h3>
+          <p>제사 음식처럼 차려 비벼 먹는 안동 향토 음식. 월영교 근처에 전문점이 모여 있어요.</p>
+          <a class="map" data-q="월영교 헛제삿밥" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop"><div class="time">13:00</div>
+        <div class="card">
+          <h3>만휴정</h3>
+          <p>드라마 '미스터 션샤인' 촬영지. 계곡 폭포 위 정자로 건너가는 외나무다리가 포토스폿. 가을 단풍이 정말 예뻐요. 시내에서 약 40분, 울산 가는 길 쪽이라 마지막 코스로 딱.</p>
+          <div class="tags"><span class="tag">사진 필수</span><span class="tag green">무료</span></div>
+          <a class="map" data-q="만휴정" href="#">지도 열기 →</a>
+        </div></li>
+      <li class="stop move"><div class="time">14:30</div>
+        <div class="card">울산으로 출발 · 약 2시간</div></li>
+      <li class="stop"><div class="time">16:30</div>
+        <div class="card">
+          <h3>울산 도착</h3>
+          <p>수고했어요. 다음 여행은 어디로?</p>
+        </div></li>
+    </ol>
+  </section>
+
+  <!-- 먹을 것 -->
+  <section class="panel" id="food" role="tabpanel" hidden>
+    <h2>안동에서 꼭 먹을 것</h2>
+    <p class="day-sub">일정 속 끼니와 기념품</p>
+    <div class="list">
+      <div class="item"><h3>안동찜닭</h3><p>구시장 찜닭골목 · 1일차 저녁</p></div>
+      <div class="item"><h3>안동간고등어</h3><p>하회마을 장터 정식 · 1일차 점심. 기념품으로 포장도 가능</p></div>
+      <div class="item"><h3>한우 갈비</h3><p>운흥동 갈비골목 · 2일차 저녁</p></div>
+      <div class="item"><h3>헛제삿밥</h3><p>월영교 근처 · 3일차 브런치</p></div>
+      <div class="item"><h3>맘모스제과 크림치즈빵</h3><p>문화의거리 · 2일차 밤</p></div>
+      <div class="item"><h3>안동국시 · 안동식혜</h3><p>안동식혜는 고춧가루 넣은 빨간 식혜. 한 번쯤 도전</p></div>
+      <div class="item"><h3>안동소주</h3><p>기념품용. 작은 병으로 사면 부담 없어요</p></div>
+    </div>
+  </section>
+
+  <!-- 준비물·팁 -->
+  <section class="panel" id="pack" role="tabpanel" hidden>
+    <h2>준비물 · 팁</h2>
+    <p class="day-sub">체크한 항목은 이 폰에 저장돼요</p>
+
+    <h4>준비물</h4>
+    <div class="list" id="checklist">
+      <label class="item check"><input type="checkbox" data-k="jacket"><span>경량패딩이나 두꺼운 겉옷 (아침·밤 쌀쌀)</span></label>
+      <label class="item check"><input type="checkbox" data-k="shoes"><span>편한 운동화 (흙길, 돌계단 많음)</span></label>
+      <label class="item check"><input type="checkbox" data-k="charger"><span>보조배터리 · 차량용 충전기</span></label>
+      <label class="item check"><input type="checkbox" data-k="cash"><span>현금 조금 (시장·장터용)</span></label>
+      <label class="item check"><input type="checkbox" data-k="cooler"><span>아이스백 (간고등어 기념품용)</span></label>
+      <label class="item check"><input type="checkbox" data-k="snack"><span>차에서 먹을 간식 · 플레이리스트</span></label>
+      <label class="item check"><input type="checkbox" data-k="id"><span>신분증 · 숙소 예약 확인</span></label>
+    </div>
+
+    <h4>알아두면 좋은 것</h4>
+    <div class="list">
+      <div class="item"><h3>날씨</h3><p>11월 초 안동은 낮 15도 안팎, 아침·밤은 5도 아래로 떨어질 수 있어요. 일교차가 커서 겹쳐 입기.</p></div>
+      <div class="item"><h3>단풍</h3><p>11월 첫 주가 안동 단풍 절정 무렵. 병산서원, 도산서원, 만휴정이 특히 예뻐요.</p></div>
+      <div class="item"><h3>월요일 휴무</h3><p>박물관과 일부 식당은 월요일에 쉬어요. 2일차는 야외 위주로 짰지만 식당은 가기 전에 확인.</p></div>
+      <div class="item"><h3>입장 마감</h3><p>하회마을, 도산서원은 동절기엔 오후 5시 전후로 문을 닫고, 입장은 그보다 일찍 마감돼요.</p></div>
+      <div class="item"><h3>운전</h3><p>병산서원 진입로와 만휴정 가는 길은 좁고 굽은 구간이 있어요. 해 지기 전에 다녀오는 게 안전.</p></div>
+    </div>
+  </section>
+
+  <footer>즐거운 여행 되기를 · 2026.11</footer>
+</div>
+
+<script>
+  // 지도 링크 (네이버 지도 검색)
+  document.querySelectorAll('a.map[data-q]').forEach(function (a) {
+    a.href = 'https://map.naver.com/p/search/' + encodeURIComponent(a.dataset.q);
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+
+  // D-day
+  (function () {
+    var start = new Date(2026, 10, 1);
+    var end = new Date(2026, 10, 3);
+    var now = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var diff = Math.round((start - today) / 86400000);
+    var el = document.getElementById('dday');
+    if (diff > 0) el.textContent = 'D-' + diff;
+    else if (today <= end) el.textContent = '여행 중!';
+    else el.textContent = '다녀옴';
+  })();
+
+  // 탭
+  var tabs = document.querySelectorAll('.tab');
+  function show(id) {
+    tabs.forEach(function (t) {
+      var on = t.dataset.panel === id;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      document.getElementById(t.dataset.panel).hidden = !on;
+    });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () { show(t.dataset.panel); });
+  });
+  // 여행 당일이면 그날 탭을 먼저 연다
+  (function () {
+    var now = new Date();
+    if (now.getFullYear() === 2026 && now.getMonth() === 10 && now.getDate() <= 3) {
+      show('d' + now.getDate());
+    }
+  })();
+
+  // 준비물 체크 저장
+  var KEY = 'andong-trip-checklist';
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+  document.querySelectorAll('#checklist input').forEach(function (box) {
+    box.checked = !!saved[box.dataset.k];
+    box.addEventListener('change', function () {
+      saved[box.dataset.k] = box.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+    });
+  });
+</script>
+</body>
+</html>
